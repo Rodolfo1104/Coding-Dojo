@@ -1,10 +1,17 @@
-from collections import Counter
-
 N = int(input())
-
+letras = 'abcdefghijklmnopqrstuvwxyz'
 for i in range(N):
-    txt = input()
-    d = Counter(txt.lower())
-    for j in d.keys:
-        if(not j.isalpha()):
-            
+    frase = input().lower()
+    count = 0
+    for letra in letras:
+        if letra in frase:
+            count += 1
+    
+
+    if (count  == 26):
+        print("frase completa")
+    elif(count >= 13):
+        print("frase quase completa")
+    else:
+        print("frase mal elaborada")
+    
