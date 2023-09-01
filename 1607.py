@@ -8,14 +8,9 @@ for i in range(T):
         if A[j] == B[j]:
             continue
         else:
-            ord(A[j]) - 
-            while A[j] != B[j]:
-                if (A[j] == 'z'):
-                    A[j] = 'a'                   
-                else:
-                    
-                    A[j] = chr(num_letra)
-                cont += 1
+            val1 = ord(A[j]) - ord("a")
+            val2 = ord(B[j]) - ord("a")
+            cont += (val2 - val1) % 26
             
     print(cont)    
         
